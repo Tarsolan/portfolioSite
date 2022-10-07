@@ -1,0 +1,362 @@
+/* Theme Variables */
+:root {
+  --pageBackground: white;
+  --backgroundColorAbout: lightblue;
+  --backgroundColorContact: white;
+  --textColorPrimary: black;
+  --navColor: rgba(27, 67, 186, 1);
+  --buttonColor: rgba(94, 139, 242, 1);
+  --backgroundColorAboutBorder: black;
+  --link-color: blue;
+  --link-color-hover: darkblue;
+  --to-top: rgba(94, 139, 242, 1);
+  --to-top-hover: rgb(73, 119, 226);
+}
+
+[data-theme="red"] {
+  --pageBackground: white;
+  --backgroundColorAbout: rgb(201, 46, 46);
+  --backgroundColorContact: white;
+  --textColorPrimary: white;
+  --navColor: rgb(186, 27, 27);
+  --buttonColor: rgb(242, 94, 94);
+  --backgroundColorAboutBorder: black;
+  --link-color: lightgrey;
+  --link-color-hover: white;
+  --to-top: rgb(242, 94, 94);
+  --to-top-hover: rgb(235, 81, 81);
+}
+
+[data-theme="green"] {
+  --pageBackground: rgb(255, 255, 255);
+  --backgroundColorAbout: rgba(85, 126, 75, 0.747);
+  --backgroundColorContact: white;
+  --textColorPrimary: black;
+  --navColor: rgb(73, 131, 58);
+  --buttonColor: #45b3f1;
+  --backgroundColorAboutBorder: black;
+  --link-color: blue;
+  --link-color-hover: darkblue;
+  --to-top: #45b3f1;
+  --to-top-hover: #34abf0;
+}
+
+[data-theme="dark"] {
+  --pageBackground: rgb(41, 41, 41);
+  --backgroundColorAbout: rgb(48, 47, 47);
+  --backgroundColorContact: white;
+  --textColorPrimary: white;
+  --navColor: rgb(24, 21, 21);
+  --buttonColor: rgb(85, 84, 84);
+  --backgroundColorAboutBorder: black;
+  --link-color: lightblue;
+  --link-color-hover: blue;
+  --to-top: rgb(85, 84, 84);
+  --to-top-hover: rgb(65, 64, 64);
+}
+
+/* App CSS */
+hr {
+  margin: 0px;
+}
+
+html {
+  background: var(--pageBackground);
+}
+
+#root {
+  background: var(--pageBackground);
+}
+
+/* Nav Bar */
+.navbar-portfolio {
+  background-color: var(--navColor);
+  color: white;
+  border-bottom: 1px solid var(--backgroundColorAboutBorder);
+  box-shadow: 0 5px 20px rgb(104, 104, 104);
+}
+
+.navbar-portfolio a:hover,
+.navbar-portfolio a:focus {
+  color: white;
+}
+
+.navbar-portfolio a,
+.navbar-portfolio a:hover {
+  color: white;
+}
+
+.navbar-toggler-icon {
+  border: 1px solid white;
+  background-color: rgb(43, 144, 226);
+}
+
+/* User Page Stuff */
+
+.userPage button {
+  background-color: var(--buttonColor);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.user-wrap.show {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto 12.5%;
+  height: auto;
+}
+
+.user-wrap.hide {
+  height: 0px;
+  overflow: hidden;
+}
+
+.userPage {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#debug {
+  text-align: center;
+}
+
+.user-para {
+  text-align: center;
+}
+
+.user-tile {
+  background-color: var(--backgroundColorAbout);
+  color: var(--textColorPrimary);
+  text-align: center;
+  margin: 10px 5%;
+  border: 1px solid black;
+  border-radius: 12.5%;
+}
+
+.user-tile:hover {
+  transform: scale(1.5);
+  transition: all 0.2s;
+}
+
+.user-img {
+  border-radius: 50%;
+  border: 3px solid var(--textColorPrimary);
+  height: 200px;
+  width: 200px;
+}
+
+.user-tile a {
+  color: var(--link-color);
+}
+
+.user-tile a:hover {
+  color: var(--link-color-hover);
+}
+
+@media only screen and (max-width: 1000px) {
+  .user-wrap.show {
+    grid-template-columns: 1fr 1fr;
+  }
+  .user-img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .user-wrap.show {
+    grid-template-columns: 1fr;
+  }
+  .user-tile:hover {
+    transform: none;
+  }
+}
+
+/* About Page */
+
+.aboutPage {
+  background-color: var(--backgroundColorAbout);
+  color: var(--textColorPrimary);
+  margin: auto 20%;
+  padding: 30px 10px 10px 10px;
+  border-radius: 2px;
+  border: 2px solid var(--backgroundColorAboutBorder);
+  border-top: none;
+}
+
+.aboutPage h2 {
+  text-align: center;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 100px;
+  background: var(--to-top);
+  color: var(--textColorPrimary);
+  cursor: pointer;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 0 5px 10px #ccc;
+}
+
+.back-to-top:hover {
+  background: var(--to-top-hover);
+}
+
+/* Photo */
+
+.headshot {
+  text-align: center;
+}
+
+.image.show {
+  transition: height ease 0.3s;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  height: 450px;
+  width: 300px;
+}
+
+.image.hide {
+  transition: height ease 0.3s;
+  height: 0;
+}
+
+.headshot button {
+  margin: 10px;
+  background-color: var(--buttonColor);
+  color: var(--textColorPrimary);
+  border-radius: 8px;
+  padding: 6px;
+}
+
+/* Hobbies */
+
+.hobbies figure {
+  text-align: center;
+}
+
+.hobbies img {
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  height: 650px;
+  width: 500px;
+}
+
+.hobbies li {
+  margin: 5px auto;
+}
+
+.example {
+  text-align: center;
+}
+
+.example img {
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .example img {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .aboutPage {
+    margin: auto 12.5%;
+  }
+  .headshot img {
+    height: 300px;
+    width: 200px;
+  }
+  .hobbies img {
+    height: 400px;
+    width: 300px;
+  }
+  .back-to-top {
+    font-size: 48px;
+    right: 10px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .aboutPage {
+    margin: auto 5%;
+  }
+  .headshot img {
+    height: 200px;
+    width: 100px;
+  }
+  .hobbies img {
+    height: 300px;
+    width: 200px;
+  }
+  .back-to-top {
+    font-size: 48px;
+    right: 10px;
+  }
+}
+
+/* Form */
+
+.userForm {
+  margin: 1% 30%;
+  border: 1px solid black;
+  padding: 25px;
+  text-align: left;
+  background-color: var(--backgroundColorAbout);
+  color: var(--textColorPrimary);
+}
+
+.formHeader,
+.welcomePage {
+  margin: 1% 30%;
+}
+
+.themeBtn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.blue {
+  background-color: lightblue;
+  color: black;
+}
+
+.red {
+  background-color: rgb(170, 71, 71);
+  color: black;
+}
+
+.green {
+  background-color: rgba(72, 131, 58, 0.705);
+}
+
+.dark {
+  background-color: rgb(48, 47, 47);
+  color: white;
+}
+
+.userForm button {
+  background-color: var(--buttonColor);
+}
+
+.form-text {
+  color: var(--textColorPrimary) !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .userForm {
+    margin: 1% 12.5%;
+  }
+  .formHeader,
+  .welcomePage {
+    margin: 1% 12.5%;
+  }
+}
