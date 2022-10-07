@@ -52,9 +52,16 @@ const Game = () => {
   // Loads the deck with a unique ID, sets that ID to be passed to each card
   useEffect(() => {
     getDeck();
-    const highScores = JSON.parse(localStorage.getItem("highScore"));
-    if (highScores) {
+    try {
+      var highScores = JSON.parse(localStorage.getItem("highScore"));
+    } catch (error) {
+      var highScores = 0;
+    }
+
+    if (highScores !== undefined) {
       setHighScore(highScores);
+    } else {
+      setHighScore(0);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
