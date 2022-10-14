@@ -1,0 +1,23 @@
+.themeBtn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.blue {
+  background-color: lightblue;
+  color: black;
+}
+
+.red {
+  background-color: rgb(170, 71, 71);
+  color: black;
+}
+
+.green {
+  background-color: rgba(72, 131, 58, 0.705);
+}
+
+.dark {
+  background-color: rgb(48, 47, 47);
+  color: white;
+}

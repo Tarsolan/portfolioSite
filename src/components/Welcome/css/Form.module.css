@@ -1,0 +1,30 @@
+/* Form */
+
+.userForm {
+  margin: 1% 30%;
+  border: 1px solid black;
+  padding: 25px;
+  text-align: left;
+  background-color: var(--backgroundColorAbout);
+  color: var(--textColorPrimary);
+}
+
+.formHeader,
+.welcomePage {
+  margin: 1% 30%;
+}
+
+.userForm button {
+  background-color: var(--buttonColor);
+}
+
+.formText {
+  color: var(--textColorPrimary) !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .formHeader,
+  .welcomePage {
+    margin: 1% 12.5%;
+  }
+}
