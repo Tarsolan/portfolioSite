@@ -8,7 +8,7 @@ const WorkExampleRouter = () => {
   return (
     <Routes>
       <Route path="/game" element={<Game />} />
-      <Route path="/tracker/*" element={<TaskTracker />} />
+      {/* <Route path="/tracker/*" element={<TaskTracker />} /> */}
       <Route path="/users" element={<Users />} />
     </Routes>
   );

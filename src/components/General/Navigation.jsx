@@ -37,10 +37,11 @@ const Navigation = ({ username, onToggle }) => {
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
 
-                <NavDropdown.Item as={NavLink} to="/examples/tracker">
+                {/* Task Tracker currently removed until back end is set up */}
+                {/* <NavDropdown.Item as={NavLink} to="/examples/tracker">
                   Task Tracker
                 </NavDropdown.Item>
-                <NavDropdown.Divider />
+                <NavDropdown.Divider /> */}
 
                 <NavDropdown.Item>
                   <ThemeToggle onToggle={onToggle} location="nav" />
