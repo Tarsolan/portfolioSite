@@ -1,14 +1,15 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import useLocalStorage from "use-local-storage";
-import About from "./components/about-components/About";
-import Users from "./components/user-components/Users";
-import Form from "./components/form-components/Form";
-import Game from "./card-game/Game";
-import Navigation from "./components/Basic-Components/Navigation";
-import TaskTracker from "./task-tracker/TaskTracker";
+import About from "./components/About/About";
+import Form from "./components/Welcome/Form";
+import NotFound from "./components/General/NotFound";
+import Navigation from "./components/General/Navigation";
 import { useState } from "react";
-import Welcome from "./components/Basic-Components/Welcome";
+import Welcome from "./components/Welcome/Welcome";
+import WorkExampleRouter from "./components/Routes/WorkExampleRouter";
 
 function App() {
   const [username, setName] = useState("");
@@ -30,37 +31,40 @@ function App() {
           <Navigation username={username} onToggle={switchTheme} />
         </header>
 
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Welcome
-                onToggle={switchTheme}
-                setName={setName}
-                setCheck={setCheck}
-                name={username}
-                check={check}
-              />
-            }
-          />
-          <Route
-            path="/About"
-            element={<About name={username} age={30} town="St. John's" />}
-          />
-          <Route path="/Users" element={<Users />} />
-          <Route
-            path="/Form"
-            element={
-              <Form
-                setName={setName}
-                onToggle={switchTheme}
-                setCheck={setCheck}
-              />
-            }
-          />
-          <Route path="/Game" element={<Game />} />
-          <Route path="/Tracker/*" element={<TaskTracker />} />
-        </Routes>
+        <main>
+          <ToastContainer />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Welcome
+                  onToggle={switchTheme}
+                  setName={setName}
+                  setCheck={setCheck}
+                  name={username}
+                  check={check}
+                />
+              }
+            />
+            <Route
+              path="/about"
+              element={<About name={username} age={30} town="St. John's" />}
+            />
+            <Route path="/examples/*" element={<WorkExampleRouter />} />
+            <Route
+              path="/settings"
+              element={
+                <Form
+                  setName={setName}
+                  onToggle={switchTheme}
+                  setCheck={setCheck}
+                />
+              }
+            />
+
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
       </div>
     </Router>
   );

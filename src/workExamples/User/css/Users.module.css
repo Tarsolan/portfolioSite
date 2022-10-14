@@ -1,0 +1,86 @@
+/* User Page Stuff */
+
+.userPage button {
+  background-color: var(--buttonColor);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.show {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: auto 12.5%;
+  height: auto;
+}
+
+.hide {
+  height: 0px;
+  overflow: hidden;
+}
+
+.userPage {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#debug {
+  text-align: center;
+}
+
+.userPara {
+  text-align: center;
+}
+
+.userTile {
+  background-color: var(--backgroundColorAbout);
+  color: var(--textColorPrimary);
+  text-align: center;
+  margin: 10px 5%;
+  border: 1px solid black;
+  border-radius: 12.5%;
+}
+
+.userTile:hover {
+  transform: scale(1.5);
+  transition: all 0.2s;
+}
+
+.userImg {
+  border-radius: 50%;
+  border: 3px solid var(--textColorPrimary);
+  height: 200px;
+  width: 200px;
+}
+
+.userTile a {
+  color: var(--link-color);
+}
+
+.userTile a:hover {
+  color: var(--link-color-hover);
+}
+
+@media only screen and (max-width: 1000px) {
+  .show {
+    grid-template-columns: 1fr 1fr;
+  }
+  .userImg {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .show {
+    grid-template-columns: 1fr;
+  }
+  .userTile:hover {
+    transform: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .userForm {
+    margin: 1% 12.5%;
+  }
+}

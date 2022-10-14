@@ -1,0 +1,138 @@
+/* Game Stuff */
+
+.game-para {
+  text-align: center;
+  background-color: #282c34;
+  margin: 0px 12.5% 20px 12.5%;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 8px;
+  font-size: large;
+  font-weight: 500;
+}
+
+#game {
+  padding-top: 2rem;
+  background-image: url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr;
+  align-items: center;
+  background-color: grey;
+  /* min-height: 650px; */
+  margin: 3% 12.5%;
+  border: 3px solid black;
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.answerButton {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #3a7cde;
+  color: white;
+  border: 2px solid #ffb800;
+  transition: 0.2s;
+}
+
+.answerButton:hover {
+  background-color: #ffb800;
+  transition: 0.2s;
+}
+
+/* Top of Page & Menu */
+
+#game-menu {
+  grid-column: span 3;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #3a7cde;
+  border: 2px solid #ffb800;
+  border-radius: 8px;
+  align-items: center;
+  margin: auto 30px;
+}
+
+#game-menu div {
+  font-size: 1.75em;
+}
+
+#get-new-deck {
+  color: white;
+  margin-top: 1rem;
+  font-size: 0.9em;
+}
+
+/* End Results */
+
+#result {
+  margin: 20px;
+  font-size: 32pt;
+  text-align: center;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid black;
+  grid-column: span 3;
+}
+
+.Wrong {
+  background-color: red;
+  color: white;
+}
+
+.Right {
+  background-color: green;
+  color: white;
+}
+
+.Tie {
+  background-color: #ffb800;
+  color: white;
+}
+
+.gameMiddle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 250px;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 1000px) {
+  #game-menu {
+    grid-column: span 1;
+    flex-direction: column;
+    margin: 10px auto;
+  }
+  #result {
+    grid-column: span 1;
+    grid-row: 2;
+  }
+  .game-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    margin: auto 2%;
+  }
+  .answerButton {
+    width: 70%;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #3a7cde;
+    color: white;
+    border: 2px solid #ffb800;
+    transition: 0.2s;
+  }
+  .gameMiddle {
+    justify-content: space-evenly;
+  }
+}
