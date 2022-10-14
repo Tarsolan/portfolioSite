@@ -8,7 +8,20 @@ const toastProps = {
   pauseOnHover: true,
   draggable: true,
   progress: undefined,
+  theme: "colored",
   transition: Slide,
+};
+
+const highScoreProps = {
+  position: "top-center",
+  autoClose: 2500,
+  hideProgressBar: false,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "colored",
+  transition: Flip,
 };
 
 const successToast = (message) => {
@@ -23,4 +36,8 @@ const infoToast = (message) => {
   toast.info(message, toastProps);
 };
 
-export { successToast, errorToast, infoToast };
+const highScoreToast = (message) => {
+  toast.success(message, highScoreProps);
+};
+
+export { successToast, errorToast, infoToast, highScoreToast };
