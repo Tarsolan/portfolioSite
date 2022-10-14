@@ -31,21 +31,26 @@ const Navigation = ({ username, onToggle }) => {
                   Card Game - React
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
+
                 <NavDropdown.Item as={NavLink} to="/examples/users">
                   User List - Loading a list of users from an API
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
+
                 <NavDropdown.Item as={NavLink} to="/examples/tracker">
                   Task Tracker
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
+
                 <NavDropdown.Item>
                   <ThemeToggle onToggle={onToggle} location="nav" />
                 </NavDropdown.Item>
               </NavDropdown>
+
               <Nav.Link href="https://github.com/Tarsolan/portfolio">
                 <GoMarkGithub /> GitHub
               </Nav.Link>
+
               <Nav.Link as={NavLink} to="/settings">
                 <FiSettings /> Settings
               </Nav.Link>
