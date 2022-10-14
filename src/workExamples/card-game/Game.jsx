@@ -6,7 +6,12 @@ import { useState, useEffect } from "react";
 import Counter from "./ui/Counter";
 import "./game.css";
 import useLocalStorage from "use-local-storage";
-import { successToast, errorToast, infoToast } from "./ui/toast";
+import {
+  successToast,
+  errorToast,
+  infoToast,
+  highScoreToast,
+} from "./ui/toast";
 
 const Game = () => {
   const [DeckID, setDeckID] = useState();
@@ -123,6 +128,7 @@ const Game = () => {
       errorToast("Wrong answer!");
       if (counter > highScore) {
         setHighScore(counter);
+        highScoreToast("New High Score!");
       }
       setCounter(0);
       // Resets the game
