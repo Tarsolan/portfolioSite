@@ -1,6 +1,7 @@
 import React from "react";
-import whatIf from "./what-if.jpg";
+import whatIf from "../images/what-if.jpg";
 import styles from "./css/About.module.css";
+import Example from "./Example";
 
 const Hobbies = () => {
   return (
@@ -32,12 +33,11 @@ const Hobbies = () => {
           expect me to ask about a job at some point in that conversation.
         </li>
       </ul>
-      <figure>
-        <img src={whatIf} alt="Me, hopefully" />
-        <figcaption>
-          This is me, if you give me a job. Look at how productive I am.
-        </figcaption>
-      </figure>
+      <Example
+        photo={whatIf}
+        captionText="This is me, if you give me a job. Look at how productive I am."
+        altText="Me someday, hopefully"
+      />
     </article>
   );
 };

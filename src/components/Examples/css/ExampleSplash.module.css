@@ -1,0 +1,15 @@
+.splashPage {
+  background-color: var(--backgroundColorAbout);
+  color: var(--textColorPrimary);
+  margin: auto 20%;
+  padding: 30px 10px 10px 10px;
+  border-radius: 2px;
+  border: 2px solid var(--backgroundColorAboutBorder);
+  border-top: none;
+  position: absolute;
+  top: 0px;
+}
+
+.splashPage h2 {
+  text-align: center;
+}

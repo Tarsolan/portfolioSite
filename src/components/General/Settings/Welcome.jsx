@@ -1,9 +1,9 @@
 import React from "react";
-import Form from "./Form";
+import WelcomeForm from "./WelcomeForm";
 import { Link } from "react-router-dom";
 import styles from "./css/Form.module.css";
 
-const Welcome = ({ setName, onToggle, name, check, setCheck }) => {
+const Welcome = ({ name, check, themePackage }) => {
   return (
     <div>
       <div className={styles.welcomePage}>
@@ -13,7 +13,15 @@ const Welcome = ({ setName, onToggle, name, check, setCheck }) => {
           before you begin the most interesting read of your entire life.
         </p>
       </div>
-      <Form setName={setName} onToggle={onToggle} setCheck={setCheck} />
+      <div className={styles.formHeader}>
+        <h3>Customization Page</h3>
+        <p>
+          Here, you can customize certain aspects of the page. The name you
+          enter here will be displayed in several of the components of the site,
+          and there are a few color options to choose from as well.
+        </p>
+      </div>
+      <WelcomeForm themePackage={themePackage} />
       <div className={styles.welcomePage}>
         <p>
           {name === "" ? (

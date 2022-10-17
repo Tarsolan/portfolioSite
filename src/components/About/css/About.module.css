@@ -8,27 +8,12 @@
   border-radius: 2px;
   border: 2px solid var(--backgroundColorAboutBorder);
   border-top: none;
+  position: absolute;
+  top: 0px;
 }
 
 .aboutPage h2 {
   text-align: center;
-}
-
-.backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 100px;
-  background: var(--to-top);
-  color: var(--textColorPrimary);
-  cursor: pointer;
-  border-radius: 100px;
-  border: none;
-  box-shadow: 0 5px 10px #ccc;
-}
-
-.backToTop:hover {
-  background: var(--to-top-hover);
 }
 
 /* Photo */
