@@ -1,7 +1,7 @@
 import React from "react";
-import whatIf from "../images/what-if.jpg";
+import whatIf from "../images/what-if.avif";
 import styles from "./css/About.module.css";
-import Example from "./Example";
+import Example from "../UI/Example";
 
 const Hobbies = () => {
   return (

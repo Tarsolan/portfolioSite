@@ -5,8 +5,7 @@ import Photo from "./Photo";
 import loginshot from "../images/loginsmall.png";
 import Hobbies from "./Hobbies";
 import History from "./History";
-import { useState, useEffect } from "react";
-import Example from "./Example";
+import Example from "../UI/Example";
 import styles from "./css/About.module.css";
 import ScrollButton from "../UI/ScrollButton";
 
