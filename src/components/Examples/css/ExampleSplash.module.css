@@ -31,9 +31,22 @@
   display: grid;
   /* grid-template-columns: 0.1fr 1fr; */
   grid-template-rows: 0.1fr 1fr;
+  height: 100%;
 }
 
 .exampleBtn:hover {
   transition: all 0.2s;
   background-color: var(--to-top-hover);
+}
+
+@media only screen and (max-width: 884px) {
+  .btnContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2%;
+  }
+
+  .exampleBtn {
+    align-items: center;
+  }
 }

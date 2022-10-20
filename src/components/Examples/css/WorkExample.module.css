@@ -8,3 +8,14 @@
   /* border: 1px solid white;
   padding: 12px; */
 }
+
+@media only screen and (max-width: 950px) {
+  .exampleContainer {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  .example {
+    margin: auto;
+  }
+}
