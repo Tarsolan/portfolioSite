@@ -29,6 +29,7 @@ const WelcomeForm = ({ themePackage }) => {
     <form className={styles.userForm} onSubmit={submitData}>
       <h3>Personalize things</h3>
       <ThemeToggle onToggle={onToggle} />
+      <br />
       <div className="mb-3">
         <label htmlFor="userInput1" className="form-label">
           Your Name
