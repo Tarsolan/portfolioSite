@@ -1,0 +1,12 @@
+.skillContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.skillHeader {
+  text-decoration: underline;
+}
+
+.techSkills {
+  grid-row: span 2;
+}

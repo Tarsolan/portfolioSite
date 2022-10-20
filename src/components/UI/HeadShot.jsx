@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Headshot from "../images/Aridgeley-headshot.png";
-import styles from "./css/About.module.css";
+import oldshot from "../images/Aridgeley-headshot.png";
+import newShot from "../images/headshot-Oct2022.jpg";
+import styles from "./css/HeadShot.module.css";
 
-const Photo = () => {
+const HeadShot = () => {
   const [showPic, setShowPic] = useState(true);
 
   const toggleFace = () => {
@@ -13,7 +14,7 @@ const Photo = () => {
     <figure className={styles.headshot}>
       <>
         <img
-          src={Headshot}
+          src={newShot}
           alt="My great big face"
           className={`${styles.image} ${
             showPic ? `${styles.show}` : `${styles.hide}`
@@ -22,7 +23,7 @@ const Photo = () => {
         <figcaption>
           <span className="caption-friendly">
             {showPic
-              ? "Yep. That's me, right after doing some amazing work with a robot. What a guy."
+              ? "Yep. That's me, attending a TechNL conference. What a guy."
               : "Wow, okay. Seems a bit rude, but you do you."}
             <br />
           </span>
@@ -37,4 +38,4 @@ const Photo = () => {
   );
 };
 
-export default Photo;
+export default HeadShot;
