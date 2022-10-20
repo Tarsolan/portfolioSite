@@ -1,14 +1,14 @@
 /* Form */
 .userForm {
   /* margin: 1% 30%; */
-  margin-left: 1%;
+  margin-left: 1.25%;
   border: 1px solid black;
-  padding: 25px;
-  text-align: left;
+  padding: 12px;
+  text-align: center;
   background-color: var(--backgroundColorAbout);
   color: var(--textColorPrimary);
-  position: sticky;
-  width: 18%;
+  position: absolute;
+  width: 10%;
   left: 0px;
   top: 1%;
 }

@@ -1,7 +1,17 @@
 import loginshot from "../../images/loginsmall.png";
 import productPage from "../../images/FlowerScreen2.png";
+import { FaReact } from "react-icons/fa";
+import { SiNodedotjs } from "react-icons/si";
 
 const flowerShop = {
+  buttonTitle: (
+    <>
+      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+        <FaReact /> <SiNodedotjs />
+      </div>
+      <span>Flower Shop</span>
+    </>
+  ),
   title: "Flower Shop Project",
   displayPhoto: {
     src: loginshot,
@@ -10,6 +20,7 @@ const flowerShop = {
   },
   photos: [
     {
+      title: "Product Page",
       src: productPage,
       figCaption:
         "A sample of the product page! We had several flower categories available for purchase.",
@@ -28,7 +39,6 @@ const flowerShop = {
   ),
   botDescription: (
     <>
-      <p>Some features included by this project:</p>
       <ul>
         <li>
           A login feature for users. No major authentication or security

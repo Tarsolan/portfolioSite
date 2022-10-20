@@ -1,6 +1,15 @@
 import adventureScreen from "../../images/ChallengeWk1Screen.png";
+import { FaPython } from "react-icons/fa";
 
 const textAdventure = {
+  buttonTitle: (
+    <>
+      <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+        <FaPython />
+      </div>
+      <span>Text Adventure</span>
+    </>
+  ),
   title: "Text adventure!",
   displayPhoto: {
     src: adventureScreen,

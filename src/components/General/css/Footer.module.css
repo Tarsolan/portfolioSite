@@ -1,0 +1,12 @@
+/* Footer */
+
+#footer {
+  background-color: var(--navColor);
+  border-top: 1px solid var(--backgroundColorAboutBorder);
+  /* box-shadow: 20px 20px 5px 25px rgb(104, 104, 104); */
+  /* font-family: "Parisienne", cursive; */
+  height: auto;
+  padding: 8px;
+  color: white;
+  margin-top: auto;
+}

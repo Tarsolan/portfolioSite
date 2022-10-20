@@ -10,6 +10,7 @@ import { useState } from "react";
 import Welcome from "./components/General/Settings/Welcome";
 import WorkExampleRouter from "./components/Routes/WorkExampleRouter";
 import SideBar from "./components/UI/SideBar";
+import Footer from "./components/General/Footer";
 
 function App() {
   const [name, setName] = useState("");
@@ -50,7 +51,10 @@ function App() {
               path="/"
               element={<About name={name} age={30} town="St. John's" />}
             />
-            <Route path="/examples/*" element={<WorkExampleRouter />} />
+            <Route
+              path="/examples/*"
+              element={<WorkExampleRouter setShowSidebar={setShowSidebar} />}
+            />
             <Route
               path="/settings"
               element={
@@ -65,6 +69,8 @@ function App() {
           </Routes>
           {showSidebar && <SideBar themePackage={themePackage} />}
         </main>
+
+        <Footer />
       </div>
     </Router>
   );

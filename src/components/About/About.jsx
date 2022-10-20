@@ -66,7 +66,7 @@ const About = ({ name, town }) => {
           <History />
         </div>
         <hr />
-        <div>
+        {/* <div>
           <Example
             photo={loginshot}
             captionText="This is a screenshot of a login page that I created - it was fully
@@ -74,7 +74,7 @@ const About = ({ name, town }) => {
             altText="Login Page of Flower Shop"
           />
         </div>
-        <hr />
+        <hr /> */}
         <div>
           <Hobbies />
         </div>
