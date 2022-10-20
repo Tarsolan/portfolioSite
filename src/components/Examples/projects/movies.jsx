@@ -23,16 +23,16 @@ const movieSite = {
   },
   photos: [
     {
-      title: "Member Page",
+      title: "Movie Search",
       src: movieSearch,
       figCaption:
-        'An image of the "All Members" page. This would call the members from a PostgreSQL server and display them here.',
+        'The output of a search for the word "Friday". It also would be able to tell if the word was spelled wrong (fuzzy searching)!',
     },
     {
-      title: "Create Mission Page",
+      title: "Actor Search",
       src: castSearch,
       figCaption:
-        "The create mission page. Clients who have logged in to the site are able to create missions that members can undertake.",
+        'Search output when searching for "Will Smith". All of the top search results are movies that contain the actor/actress you\'re looking for.',
     },
   ],
   topDescription: (

@@ -23,3 +23,13 @@
   background-color: rgb(48, 47, 47) !important;
   color: white;
 }
+
+@media only screen and (max-width: 1300px) {
+  .themeBtn {
+    grid-template-columns: 1fr;
+  }
+
+  .themeHead {
+    font-size: smaller;
+  }
+}

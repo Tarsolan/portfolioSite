@@ -4,7 +4,9 @@ import styles from "./css/ThemeToggle.module.css";
 const ThemeToggle = ({ onToggle, location }) => {
   return (
     <>
-      {location === "nav" ? null : <h4>Theme Selection</h4>}
+      {location === "nav" ? null : (
+        <h4 className={styles.themeHead}>Theme Selection</h4>
+      )}
       <div className={styles.themeBtn}>
         <button onClick={() => onToggle("blue")} className={styles.blue}>
           Blue

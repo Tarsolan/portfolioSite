@@ -19,9 +19,10 @@ const History = () => {
       <p>
         Finally, in 2021, I decided it was time to change things up and start
         doing something I was passionate about (and also something that would
-        earn me enough money to buy things). I spent a long time thinking about
-        what I wanted, and eventually settled on Software Development. I've
-        always been good with computers - might as well make a career out of it.
+        earn me enough money to buy more than just food). I spent a long time
+        thinking about what I wanted, and eventually settled on Software
+        Development. I've always been good with computers - might as well make a
+        career out of it.
       </p>
     </div>
   );
