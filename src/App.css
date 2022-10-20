@@ -79,6 +79,11 @@ body,
   flex-direction: column;
 }
 
+main {
+  position: relative;
+  font-size: 12pt;
+}
+
 /* Nav Bar */
 .navbar-portfolio {
   background-color: var(--navColor);

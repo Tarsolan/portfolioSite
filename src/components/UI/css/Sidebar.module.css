@@ -1,0 +1,40 @@
+/* Form */
+.userForm {
+  /* margin: 1% 30%; */
+  margin-left: 1.25%;
+  border: 1px solid black;
+  padding: 12px;
+  text-align: center;
+  background-color: var(--backgroundColorAbout);
+  color: var(--textColorPrimary);
+  position: absolute;
+  width: 10%;
+  left: 0px;
+  top: 1%;
+}
+
+.formHeader,
+.welcomePage {
+  margin: 1% 30%;
+}
+
+.userForm button {
+  background-color: var(--buttonColor);
+}
+
+.formText {
+  color: var(--textColorPrimary) !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .formHeader,
+  .welcomePage {
+    margin: 1% 12.5%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .userForm {
+    display: none;
+  }
+}

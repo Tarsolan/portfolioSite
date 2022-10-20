@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Headshot from "./Aridgeley-headshot.png";
+import Headshot from "../images/Aridgeley-headshot.png";
 import styles from "./css/About.module.css";
 
 const Photo = () => {

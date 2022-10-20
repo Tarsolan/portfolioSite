@@ -1,0 +1,30 @@
+.backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 100px;
+  background: var(--to-top);
+  color: var(--textColorPrimary);
+  cursor: pointer;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 0 5px 10px #ccc;
+}
+
+.backToTop:hover {
+  background: var(--to-top-hover);
+}
+
+@media only screen and (max-width: 768px) {
+  .backToTop {
+    font-size: 48px;
+    right: 10px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .backToTop {
+    font-size: 48px;
+    right: 10px;
+  }
+}

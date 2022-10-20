@@ -1,0 +1,39 @@
+.splashPage {
+  background-color: var(--backgroundColorAbout);
+  color: var(--textColorPrimary);
+  margin: auto 12.5%;
+  padding: 30px 10px 10px 10px;
+  border-radius: 2px;
+  border: 2px solid var(--backgroundColorAboutBorder);
+  border-top: none;
+  /* position: absolute; */
+  top: 0px;
+}
+
+.splashPage h2 {
+  text-align: center;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto 12.5%;
+}
+
+.exampleBtn {
+  background-color: var(--to-top);
+  color: var(--textColorPrimary);
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.2s;
+  margin: auto 2.5%;
+  display: grid;
+  /* grid-template-columns: 0.1fr 1fr; */
+  grid-template-rows: 0.1fr 1fr;
+}
+
+.exampleBtn:hover {
+  transition: all 0.2s;
+  background-color: var(--to-top-hover);
+}

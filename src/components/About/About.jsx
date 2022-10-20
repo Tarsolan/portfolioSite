@@ -5,30 +5,11 @@ import Photo from "./Photo";
 import loginshot from "../images/loginsmall.png";
 import Hobbies from "./Hobbies";
 import History from "./History";
-import { useState, useEffect } from "react";
-import Example from "./Example";
+import Example from "../UI/Example";
 import styles from "./css/About.module.css";
+import ScrollButton from "../UI/ScrollButton";
 
 const About = ({ name, town }) => {
-  const [showButton, setShowButton] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        setShowButton(true);
-      } else {
-        setShowButton(false);
-      }
-    });
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   function currentMonth() {
     let date = new Date();
     var month = date.getMonth() + 1;
@@ -85,10 +66,15 @@ const About = ({ name, town }) => {
           <History />
         </div>
         <hr />
-        <div>
-          <Example photo={loginshot} />
+        {/* <div>
+          <Example
+            photo={loginshot}
+            captionText="This is a screenshot of a login page that I created - it was fully
+        functional, with everything saved on a simulated back end."
+            altText="Login Page of Flower Shop"
+          />
         </div>
-        <hr />
+        <hr /> */}
         <div>
           <Hobbies />
         </div>
@@ -100,7 +86,7 @@ const About = ({ name, town }) => {
         <div>
           <h3>The End</h3>
           <p>
-            Well, congrats
+            Well... congrats
             {name === undefined || name === "" ? "." : `, ${name}.`} You made it
             to the bottom of the page - you now know my entire life story.
             Little nerd man plays games, hits people with swords, creates
@@ -118,11 +104,7 @@ const About = ({ name, town }) => {
             <a href="https://github.com/Tarsolan/portfolio">here.</a>
           </p>
         </div>
-        {showButton && (
-          <button onClick={scrollToTop} className={styles.backToTop}>
-            &#8679;
-          </button>
-        )}
+        <ScrollButton />
       </div>
     </>
   );

@@ -1,0 +1,10 @@
+.exampleContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.example {
+  margin: auto 12.5%;
+  /* border: 1px solid white;
+  padding: 12px; */
+}

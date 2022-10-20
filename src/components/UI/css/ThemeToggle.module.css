@@ -1,23 +1,25 @@
 .themeBtn {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 5%;
+  column-gap: 5%;
 }
 
 .blue {
-  background-color: lightblue;
+  background-color: lightblue !important;
   color: black;
 }
 
 .red {
-  background-color: rgb(170, 71, 71);
+  background-color: rgb(170, 71, 71) !important;
   color: black;
 }
 
 .green {
-  background-color: rgba(72, 131, 58, 0.705);
+  background-color: rgba(72, 131, 58, 0.705) !important;
 }
 
 .dark {
-  background-color: rgb(48, 47, 47);
+  background-color: rgb(48, 47, 47) !important;
   color: white;
 }
