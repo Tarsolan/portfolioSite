@@ -43,7 +43,9 @@ function App() {
             setShowSidebar={setShowSidebar}
           />
         </header>
+      </div>
 
+      <div data-theme={theme}>
         <main>
           <ToastContainer />
           <Routes>
@@ -69,7 +71,9 @@ function App() {
           </Routes>
           {showSidebar && <SideBar themePackage={themePackage} />}
         </main>
+      </div>
 
+      <div data-theme={theme}>
         <Footer />
       </div>
     </Router>

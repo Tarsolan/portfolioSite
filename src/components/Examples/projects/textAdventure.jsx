@@ -1,4 +1,3 @@
-import adventureScreen from "../../images/ChallengeWk1Screen.png";
 import { FaPython } from "react-icons/fa";
 
 const textAdventure = {
@@ -12,7 +11,7 @@ const textAdventure = {
   ),
   title: "Text adventure!",
   displayPhoto: {
-    src: adventureScreen,
+    src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/textAdv/ChallengeWk1Screen.png",
     figCaption:
       "A screen from my Challenge Week Project - this text adventure included several small puzzles.",
   },
@@ -31,11 +30,9 @@ const textAdventure = {
   botDescription: (
     <>
       <ul>
-        <li>
-          A login feature for users. No major authentication features, but users
-          could create accounts and save information to a simulated back end.
-        </li>
-        <li>A "remember me" feature for logged in users.</li>
+        <li>Three different endings!</li>
+        <li>Math games!</li>
+        <li>Logic puzzles!</li>
       </ul>
     </>
   ),

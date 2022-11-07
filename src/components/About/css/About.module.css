@@ -44,9 +44,9 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   .aboutPage {
-    margin: auto 12.5%;
+    margin: auto 7.5%;
   }
 }
 

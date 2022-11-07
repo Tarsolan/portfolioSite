@@ -6,13 +6,6 @@ import styles from "./css/Form.module.css";
 const Welcome = ({ name, check, themePackage }) => {
   return (
     <div>
-      <div className={styles.welcomePage}>
-        <h2>Welcome!</h2>
-        <p>
-          Thanks for looking at my portfolio. Take a look at these options
-          before you begin the most interesting read of your entire life.
-        </p>
-      </div>
       <div className={styles.formHeader}>
         <h3>Customization Page</h3>
         <p>

@@ -33,7 +33,7 @@
   }
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 1000px) {
   .userForm {
     display: none;
   }

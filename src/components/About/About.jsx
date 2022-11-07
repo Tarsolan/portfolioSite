@@ -2,13 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import Contact from "./Contact";
 import HeadShot from "../UI/HeadShot";
-import loginshot from "../images/loginsmall.png";
 import Hobbies from "./Hobbies";
 import History from "./History";
-import Example from "../UI/Example";
 import styles from "./css/About.module.css";
 import ScrollButton from "../UI/ScrollButton";
 import Skills from "./Skills";
+import Experience from "./Experience";
 
 const About = ({ name, town }) => {
   function currentMonth() {
@@ -76,28 +75,13 @@ const About = ({ name, town }) => {
         <hr />
 
         <div>
-          <History />
+          <Experience />
         </div>
 
         <hr />
 
         <div>
-          <h3>
-            I really need another section to go here. Perhaps a brief talk about
-            projects?
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            quasi eius culpa non animi quaerat cumque consequuntur nobis
-            mollitia ex labore deserunt soluta ratione pariatur reiciendis iusto
-            accusantium, similique eaque?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum
-            repudiandae at alias laudantium ratione, error nulla similique unde
-            sint temporibus vel esse rem. Cumque magni rerum minima tempore,
-            vero laudantium.
-          </p>
+          <History />
         </div>
 
         <hr />

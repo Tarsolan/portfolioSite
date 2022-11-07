@@ -1,6 +1,7 @@
 .skillContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 3%;
 }
 
 .skillHeader {
@@ -9,4 +10,17 @@
 
 .techSkills {
   grid-row: span 2;
+}
+
+@media only screen and (max-width: 735px) {
+  .skillContainer {
+    grid-template-columns: 1fr;
+    margin-bottom: 5%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 375px) {
 }

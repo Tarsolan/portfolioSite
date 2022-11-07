@@ -6,11 +6,11 @@
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  max-height: 650px;
-  max-width: 100%;
+  /* max-height: 650px;
+  max-width: 100%; */
 }
 
-@media only screen and (max-width: 1150px) {
+/* @media only screen and (max-width: 1150px) {
   .example img {
     max-width: 300px;
   }
@@ -21,3 +21,9 @@
     max-width: 250px;
   }
 }
+
+@media only screen and (max-width: 375px) {
+  .example img {
+    max-width: 200px;
+  }
+} */
