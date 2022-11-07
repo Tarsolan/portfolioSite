@@ -10,7 +10,7 @@ const Footer = () => {
       <h4>My Links</h4>
       <div>
         <div>
-          <Nav.Link href="https://github.com/Tarsolan/portfolio">
+          <Nav.Link href="https://github.com/Tarsolan">
             <div>
               <SiGithub /> - GitHub
             </div>
