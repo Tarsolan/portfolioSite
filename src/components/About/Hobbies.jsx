@@ -1,10 +1,11 @@
 import React from "react";
-import whatIf from "../images/what-if.avif";
 import styles from "./css/Hobbies.module.css";
 import Example from "../UI/Example";
-import auronPic from "../images/Auron.jpg";
 
 const Hobbies = () => {
+  const auronPic =
+    "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/general/Auron.jpg";
+
   return (
     <article className={styles.hobbies}>
       <div>

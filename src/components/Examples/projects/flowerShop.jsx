@@ -1,5 +1,3 @@
-import loginshot from "../../images/loginsmall.png";
-import productPage from "../../images/FlowerScreen2.png";
 import { FaReact } from "react-icons/fa";
 import { SiNodedotjs } from "react-icons/si";
 
@@ -14,14 +12,14 @@ const flowerShop = {
   ),
   title: "Flower Shop Project",
   displayPhoto: {
-    src: loginshot,
+    src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/flowerShop/Login-Page.jpg",
     figCaption:
       "My final project for Semester 2. I was tasked with creating a mock store front in React.",
   },
   photos: [
     {
       title: "Product Page",
-      src: productPage,
+      src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/flowerShop/FlowerScreen2.jpg",
       figCaption:
         "A sample of the product page! We had several flower categories available for purchase.",
     },

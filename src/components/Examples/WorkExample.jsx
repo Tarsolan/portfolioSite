@@ -20,12 +20,16 @@ const WorkExample = ({ currentExample, setShowSidebar }) => {
               <>
                 {" "}
                 -{" "}
-                <Link
-                  to={currentExample.example}
-                  onClick={() => setShowSidebar(false)}
-                >
-                  Give it a try!
-                </Link>
+                {currentExample.example.split("")[0] === "/" ? (
+                  <Link
+                    to={currentExample.example}
+                    onClick={() => setShowSidebar(false)}
+                  >
+                    Give it a try!
+                  </Link>
+                ) : (
+                  <a href={currentExample.example}>Go to this site!</a>
+                )}
               </>
             )}
           </h3>
@@ -54,7 +58,7 @@ const WorkExample = ({ currentExample, setShowSidebar }) => {
                       <Example
                         photo={photo.src}
                         captionText={photo.figCaption}
-                        altText={title}
+                        altText={photo.title}
                       />
                     </div>
                   );

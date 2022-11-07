@@ -1,6 +1,3 @@
-import memberPic from "../../images/Guild2.png";
-import searchResults from "../../images/Guild3.png";
-import createMission from "../../images/Guild4.png";
 import { FaReact } from "react-icons/fa";
 import { SiPostgresql } from "react-icons/si";
 
@@ -15,20 +12,20 @@ const guildPage = {
   ),
   title: "Information Website for the Adventurer's Guild",
   displayPhoto: {
-    src: searchResults,
+    src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/guild/Guild3.jpg",
     figCaption:
       "A search function that takes advantage of a MongoDB Atlas Cluster to find missions and mission reports.",
   },
   photos: [
     {
       title: "Member Page",
-      src: memberPic,
+      src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/guild/Guild2.jpg",
       figCaption:
         'An image of the "All Members" page. This would call the members from a PostgreSQL server and display them here.',
     },
     {
       title: "Create Mission Page",
-      src: createMission,
+      src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/guild/Guild4.jpg",
       figCaption:
         "The create mission page. Clients who have logged in to the site are able to create missions that members can undertake.",
     },
@@ -55,6 +52,11 @@ const guildPage = {
     <>
       <ul>
         <li>
+          This site runs on an EC2 instance. There's no SSL certificate yet, so
+          not everyone can connect. I need to set up a Load Balance to redirect
+          traffic to my own domain! Working on this now.
+        </li>
+        <li>
           Both users and clients are able to create accounts and log in. All
           user data is stored on the PG server, and all authentication is
           handled securely on the back end.
@@ -65,11 +67,12 @@ const guildPage = {
         </li>
         <li>
           Next phase of this will be adding proper security authentication to
-          the logins! Eventually will properly put this online.
+          the logins!
         </li>
       </ul>
     </>
   ),
+  example: "http://ec2-44-204-56-59.compute-1.amazonaws.com:3000/about",
 };
 
 export default guildPage;

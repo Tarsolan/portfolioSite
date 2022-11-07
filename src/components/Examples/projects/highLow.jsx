@@ -1,4 +1,3 @@
-import highLow from "../../images/HighLow.jpg";
 import { FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 
@@ -13,7 +12,7 @@ const highLowGame = {
   ),
   title: "High or Low Card Game",
   displayPhoto: {
-    src: highLow,
+    src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/cardGame/HighLow.jpg",
     figCaption:
       "A personal project that I undertook for practice with HTML, CSS, & DOM elements. I later converted this into a React app as well.",
   },

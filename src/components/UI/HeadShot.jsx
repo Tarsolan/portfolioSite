@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import oldshot from "../images/Aridgeley-headshot.png";
-import newShot from "../images/headshot-Oct2022.jpg";
 import styles from "./css/HeadShot.module.css";
+import ModalImage from "react-modal-image";
 
 const HeadShot = () => {
   const [showPic, setShowPic] = useState(true);
+  const newShot =
+    "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/general/headshot-Oct2022.jpg";
 
   const toggleFace = () => {
     setShowPic(!showPic);
@@ -13,9 +14,12 @@ const HeadShot = () => {
   return (
     <figure className={styles.headshot}>
       <>
-        <img
-          src={newShot}
+        <ModalImage
+          small={newShot}
+          large={newShot}
           alt="My great big face"
+          hideDownload
+          hideZoom
           className={`${styles.image} ${
             showPic ? `${styles.show}` : `${styles.hide}`
           }`}

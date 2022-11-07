@@ -1,26 +1,49 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Container, Nav } from "react-bootstrap";
 import { GoMarkGithub } from "react-icons/go";
 import { FiSettings } from "react-icons/fi";
-import ThemeToggle from "../UI/ThemeToggle";
+import { VscListFlat } from "react-icons/vsc";
+import { useState } from "react";
+import { useEffect } from "react";
 
-const Navigation = ({ username, onToggle, setShowSidebar }) => {
+const Navigation = ({ username, setShowSidebar }) => {
+  const [screenSize, setScreenSize] = useState("large");
+
+  useEffect(() => {
+    if (window.innerWidth < 400) setScreenSize("small");
+  }, []);
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth < 400) {
+      setScreenSize("small");
+    } else setScreenSize("large");
+  });
+
   return (
     <nav>
-      <Navbar bg="custom" expand="lg" variant="portfolio">
+      <Navbar bg="custom" expand="lg" variant="portfolio" collapseOnSelect>
         <Container>
           <Navbar.Brand as={Link} to="/">
-            Welcome to the portfolio of Alex Ridgeley
-            {username === "" ? `!` : `, ${username}!`}
+            {screenSize === "large" ? (
+              <>
+                Welcome to the portfolio of Alex Ridgeley
+                {username === "" ? `!` : `, ${username}!`}
+              </>
+            ) : (
+              <>Portfolio - Alex Ridgeley</>
+            )}
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav">
+            <VscListFlat color="white" />
+          </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link
                 as={NavLink}
                 to="/"
                 onClick={() => setShowSidebar(true)}
+                eventKey="1"
               >
                 All About Me
               </Nav.Link>
@@ -29,44 +52,10 @@ const Navigation = ({ username, onToggle, setShowSidebar }) => {
                 as={NavLink}
                 to="/examples"
                 onClick={() => setShowSidebar(true)}
+                eventKey="2"
               >
                 Work Examples
               </Nav.Link>
-
-              {/* Work Examples */}
-              {/* <NavDropdown
-                title="Work Examples"
-                id="basic-nav-dropdown"
-                menuVariant="dark"
-              >
-                <NavDropdown.Item
-                  as={NavLink}
-                  to="/examples/game"
-                  onClick={() => setShowSidebar(false)}
-                >
-                  Card Game - React
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-
-                <NavDropdown.Item
-                  as={NavLink}
-                  to="/examples/users"
-                  onClick={() => setShowSidebar(false)}
-                >
-                  User List - Loading a list of users from an API
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-
-                {/* Task Tracker currently removed until back end is set up */}
-              {/* <NavDropdown.Item as={NavLink} to="/examples/tracker">
-                  Task Tracker
-                </NavDropdown.Item>
-                <NavDropdown.Divider /> */}
-
-              {/*<NavDropdown.Item>
-                  <ThemeToggle onToggle={onToggle} location="nav" />
-                </NavDropdown.Item>
-              </NavDropdown> */}
 
               <Nav.Link href="https://github.com/Tarsolan/portfolio">
                 <GoMarkGithub /> Find me on GitHub
@@ -76,6 +65,7 @@ const Navigation = ({ username, onToggle, setShowSidebar }) => {
                 as={NavLink}
                 to="/settings"
                 onClick={() => setShowSidebar(false)}
+                eventKey="3"
               >
                 <FiSettings /> Settings
               </Nav.Link>

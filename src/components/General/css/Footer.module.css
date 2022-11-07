@@ -10,3 +10,26 @@
   color: white;
   margin-top: auto;
 }
+
+#footer a {
+  color: white;
+  text-decoration: none;
+}
+
+#footer > div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 768px) {
+  #footer > div {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  #footer > div {
+    grid-template-columns: 1fr;
+  }
+}

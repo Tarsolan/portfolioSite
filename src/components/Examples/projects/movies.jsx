@@ -1,7 +1,3 @@
-import movieHome from "../../images/Movie1.jpg";
-import movieSearch from "../../images/Movie2.png";
-import castSearch from "../../images/Movie3.png";
-
 import { FaReact } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import { SiPostgresql } from "react-icons/si";
@@ -17,20 +13,20 @@ const movieSite = {
   ),
   title: "Squishy Kitty Movie Reviews",
   displayPhoto: {
-    src: movieHome,
+    src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/moviePage/Movie1.jpg",
     figCaption:
       "A search function that takes advantage of a MongoDB Atlas Cluster to find missions and mission reports.",
   },
   photos: [
     {
       title: "Movie Search",
-      src: movieSearch,
+      src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/moviePage/Movie2.jpg",
       figCaption:
         'The output of a search for the word "Friday". It also would be able to tell if the word was spelled wrong (fuzzy searching)!',
     },
     {
       title: "Actor Search",
-      src: castSearch,
+      src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/moviePage/Movie3.jpg",
       figCaption:
         'Search output when searching for "Will Smith". All of the top search results are movies that contain the actor/actress you\'re looking for.',
     },
