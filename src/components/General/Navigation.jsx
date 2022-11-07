@@ -57,7 +57,7 @@ const Navigation = ({ username, setShowSidebar }) => {
                 Work Examples
               </Nav.Link>
 
-              <Nav.Link href="https://github.com/Tarsolan/portfolio">
+              <Nav.Link href="https://github.com/Tarsolan">
                 <GoMarkGithub /> Find me on GitHub
               </Nav.Link>
 
