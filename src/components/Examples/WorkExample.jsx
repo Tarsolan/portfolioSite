@@ -28,7 +28,13 @@ const WorkExample = ({ currentExample, setShowSidebar }) => {
                     Give it a try!
                   </Link>
                 ) : (
-                  <a href={currentExample.example}>Go to this site!</a>
+                  <a
+                    href={currentExample.example}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Go to this site!
+                  </a>
                 )}
               </>
             )}

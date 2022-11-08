@@ -72,7 +72,7 @@ const guildPage = {
       </ul>
     </>
   ),
-  example: "http://ec2-18-206-225-253.compute-1.amazonaws.com:3000/about",
+  example: "https://guildsite.aridgeleyportfolio.ca",
 };
 
 export default guildPage;
