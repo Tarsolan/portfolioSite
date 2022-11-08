@@ -109,7 +109,13 @@ const About = ({ name, town }) => {
           <p>
             You can also find a link to my GitHub profile on that same bar, or
             you can just click{" "}
-            <a href="https://github.com/Tarsolan/portfolio">here.</a>
+            <a
+              href="https://github.com/Tarsolan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here.
+            </a>
           </p>
         </div>
       </div>

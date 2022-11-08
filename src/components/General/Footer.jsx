@@ -10,14 +10,22 @@ const Footer = () => {
       <h4>My Links</h4>
       <div>
         <div>
-          <Nav.Link href="https://github.com/Tarsolan">
+          <Nav.Link
+            href="https://github.com/Tarsolan"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div>
               <SiGithub /> - GitHub
             </div>
           </Nav.Link>
         </div>
         <div>
-          <Nav.Link href="https://www.linkedin.com/in/alex-ridgeley/">
+          <Nav.Link
+            href="https://www.linkedin.com/in/alex-ridgeley/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div>
               <SiLinkedin /> - LinkedIn
             </div>
