@@ -22,6 +22,14 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.link {
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: lightblue;
+}
+
 @media only screen and (max-width: 768px) {
   #footer > div {
     grid-template-columns: 1fr 1fr;

@@ -12,20 +12,26 @@ const guildPage = {
   ),
   title: "Information Website for the Adventurer's Guild",
   displayPhoto: {
-    src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/guild/Guild3.jpg",
+    src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/guild/searchPage.png",
     figCaption:
       "A search function that takes advantage of a MongoDB Atlas Cluster to find missions and mission reports.",
   },
   photos: [
     {
+      title: "Client Detail Page",
+      src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/guild/clientDetail.png",
+      figCaption:
+        "The client detail page. Clients who have logged in can see their information, as well as missions they have created in the past.",
+    },
+    {
       title: "Member Page",
-      src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/guild/Guild2.jpg",
+      src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/guild/memberList.png",
       figCaption:
         'An image of the "All Members" page. This would call the members from a PostgreSQL server and display them here.',
     },
     {
       title: "Create Mission Page",
-      src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/guild/Guild4.jpg",
+      src: "https://alex-guild-images.s3.amazonaws.com/sqooshed/portfolio/guild/createMission.png",
       figCaption:
         "The create mission page. Clients who have logged in to the site are able to create missions that members can undertake.",
     },

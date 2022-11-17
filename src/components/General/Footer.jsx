@@ -16,7 +16,7 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <div>
-              <SiGithub /> - GitHub
+              <SiGithub /> - <span className={styles.link}>GitHub</span>
             </div>
           </Nav.Link>
         </div>
@@ -27,14 +27,14 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <div>
-              <SiLinkedin /> - LinkedIn
+              <SiLinkedin /> - <span className={styles.link}>LinkedIn</span>
             </div>
           </Nav.Link>
         </div>
         <div>
           <MailTo email="aridgeley@msn.com" subject="" body="">
             <div>
-              <SiGmail /> - Email Me
+              <SiGmail /> - <span className={styles.link}>Email</span>
             </div>
           </MailTo>
         </div>
