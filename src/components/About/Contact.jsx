@@ -1,4 +1,5 @@
 import React from "react";
+import MailTo from "../UI/MailTo";
 import styles from "./css/About.module.css";
 
 const Contact = ({ phone, email }) => {
@@ -7,8 +8,10 @@ const Contact = ({ phone, email }) => {
       <h3>Contact Info</h3>
       <p>
         I can be reached by phone at <strong>{phone}</strong>, or by email at{" "}
-        <strong>{email}</strong>. Please feel free to do so at any time, for any
-        reason.
+        <MailTo email={email} subject="" body="">
+          <strong>{email}</strong>
+        </MailTo>
+        . Please feel free to do so at any time, for any reason.
       </p>
     </div>
   );

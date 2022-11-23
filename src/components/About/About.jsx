@@ -8,30 +8,14 @@ import styles from "./css/About.module.css";
 import ScrollButton from "../UI/ScrollButton";
 import Skills from "./Skills";
 import Experience from "./Experience";
+import AWS from "./AWS";
 
-const About = ({ name, town }) => {
-  function currentMonth() {
-    let date = new Date();
-    var month = date.getMonth() + 1;
-    if (month < 10) {
-      let month_pad = `0${month}`;
-      return month_pad;
-    } else {
-      let month_pad = `${month}`;
-      return month_pad;
-    }
-  }
-
-  function currentYear() {
-    let date = new Date();
-    var year = date.getFullYear();
-    return year;
-  }
-
+const About = ({ name }) => {
   const currentAge = () => {
+    let date = new Date();
     const birthYear = 1991;
-    let age = currentYear() - birthYear;
-    return currentMonth() < 10 ? age - 1 : age;
+    let age = date.getFullYear() - birthYear;
+    return date.getMonth() + 1 >= 10 && date.getDate() >= 10 ? age : age - 1;
   };
 
   return (
@@ -44,12 +28,10 @@ const About = ({ name, town }) => {
               <h3>Introduction</h3>
               <p>
                 Hello{name === undefined || name === "" ? "." : `, ${name}.`} My
-                name is Alex Ridgeley, and this is my portfolio. Or, at least,
-                an early version of it. I'm currently a student at Keyin College
-                with a lot to learn about Software & Web Development. Treat this
-                page as an example of the things I've learned so far. It will
-                also serve as a nice reminder of how far I've come when we look
-                back at this later!
+                name is Alex Ridgeley, and this is my portfolio. I'm currently a
+                student at Keyin College with a lot of skill in Software & Web
+                Development. This page is a place for me to show off those
+                skills.
               </p>
               <p>
                 At this moment in time, I am <strong>{currentAge()}</strong>{" "}
@@ -59,6 +41,9 @@ const About = ({ name, town }) => {
                 delete it). It's just one of many fine examples of my work that
                 you will find on your journey here today.
               </p>
+              <div>
+                <AWS />
+              </div>
               <div className={styles.contact}>
                 <Contact />
               </div>
