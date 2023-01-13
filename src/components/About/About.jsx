@@ -28,10 +28,9 @@ const About = ({ name }) => {
               <h3>Introduction</h3>
               <p>
                 Hello{name === undefined || name === "" ? "." : `, ${name}.`} My
-                name is Alex Ridgeley, and this is my portfolio. I'm currently a
-                student at Keyin College with a lot of skill in Software & Web
-                Development. This page is a place for me to show off those
-                skills.
+                name is Alex Ridgeley, and this is my portfolio. I am a graduate
+                of the Software Development program at Keyin College, and this
+                page is a place for me to show off some of my skills.
               </p>
               <p>
                 At this moment in time, I am <strong>{currentAge()}</strong>{" "}
